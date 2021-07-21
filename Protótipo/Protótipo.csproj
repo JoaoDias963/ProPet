@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{722348E7-F26C-4643-93D4-6C2721943A0F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Protótipo</RootNamespace>
+    <AssemblyName>Protótipo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adocao.cs" />
+    <Compile Include="AdocaoDAO.cs" />
+    <Compile Include="Cachorro.cs" />
+    <Compile Include="CachorroDAO.cs" />
+    <Compile Include="CachorroDoacao.cs" />
+    <Compile Include="crAdocao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAdocao.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crEstoque.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crEstoque.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crExtrato.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crExtrato.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crystCachorros.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crystCachorros.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crystPessoas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crystPessoas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Database.cs" />
+    <Compile Include="Estoque.cs" />
+    <Compile Include="EstoqueDAO.cs" />
+    <Compile Include="fmAlterarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmAlterarSenha.Designer.cs">
+      <DependentUpon>fmAlterarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmBuscarAdocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmBuscarAdocao.Designer.cs">
+      <DependentUpon>fmBuscarAdocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmBuscarPessoas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmBuscarPessoas.Designer.cs">
+      <DependentUpon>fmBuscarPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmBuscarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmBuscarProduto.Designer.cs">
+      <DependentUpon>fmBuscarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmCachorrosDisponiveis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmCachorrosDisponiveis.Designer.cs">
+      <DependentUpon>fmCachorrosDisponiveis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmCadastrarAdocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmCadastrarAdocao.Designer.cs">
+      <DependentUpon>fmCadastrarAdocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmBoasVindas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmBoasVindas.Designer.cs">
+      <DependentUpon>fmBoasVindas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmBuscarCachorro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmBuscarCachorro.Designer.cs">
+      <DependentUpon>fmBuscarCachorro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmCadastrarCachorro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmCadastrarCachorro.Designer.cs">
+      <DependentUpon>fmCadastrarCachorro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmCadastrarCachorroAdocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmCadastrarCachorroAdocao.Designer.cs">
+      <DependentUpon>fmCadastrarCachorroAdocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmCadastrarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmCadastrarProduto.Designer.cs">
+      <DependentUpon>fmCadastrarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmCadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmCadastrarUsuario.Designer.cs">
+      <DependentUpon>fmCadastrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmCadastrarPessoas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmCadastrarPessoas.Designer.cs">
+      <DependentUpon>fmCadastrarPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmCaoDispPPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmCaoDispPPessoa.Designer.cs">
+      <DependentUpon>fmCaoDispPPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmDetalhesCachorro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmDetalhesCachorro.Designer.cs">
+      <DependentUpon>fmDetalhesCachorro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmDetalhesPessoas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmDetalhesPessoas.Designer.cs">
+      <DependentUpon>fmDetalhesPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmMostrarCachorroDoacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmMostrarCachorroDoacao.Designer.cs">
+      <DependentUpon>fmMostrarCachorroDoacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmPessoasQuerendoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmPessoasQuerendoCao.Designer.cs">
+      <DependentUpon>fmPessoasQuerendoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmRelats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmRelats.Designer.cs">
+      <DependentUpon>fmRelats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmTelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmTelaPrincipal.Designer.cs">
+      <DependentUpon>fmTelaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmLogin.Designer.cs">
+      <DependentUpon>fmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frRelatAdocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frRelatAdocao.Designer.cs">
+      <DependentUpon>frRelatAdocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frRelatCachorros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frRelatCachorros.Designer.cs">
+      <DependentUpon>frRelatCachorros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frRelatEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frRelatEstoque.Designer.cs">
+      <DependentUpon>frRelatEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frRelatPessoas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frRelatPessoas.Designer.cs">
+      <DependentUpon>frRelatPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PessoaDAO.cs" />
+    <Compile Include="Pessoa.cs" />
+    <Compile Include="Produto.cs" />
+    <Compile Include="ProdutoDAO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="propetDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>propetDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rtExtrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rtExtrato.Designer.cs">
+      <DependentUpon>rtExtrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioDAO.cs" />
+    <EmbeddedResource Include="crAdocao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAdocao.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crEstoque.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEstoque.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crExtrato.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crExtrato.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crystCachorros.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crystCachorros.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crystPessoas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crystPessoas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmAlterarSenha.resx">
+      <DependentUpon>fmAlterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmBuscarAdocao.resx">
+      <DependentUpon>fmBuscarAdocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmBuscarPessoas.resx">
+      <DependentUpon>fmBuscarPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmBuscarProduto.resx">
+      <DependentUpon>fmBuscarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmCachorrosDisponiveis.resx">
+      <DependentUpon>fmCachorrosDisponiveis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmCadastrarAdocao.resx">
+      <DependentUpon>fmCadastrarAdocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmBoasVindas.resx">
+      <DependentUpon>fmBoasVindas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmBuscarCachorro.resx">
+      <DependentUpon>fmBuscarCachorro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmCadastrarCachorro.resx">
+      <DependentUpon>fmCadastrarCachorro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmCadastrarCachorroAdocao.resx">
+      <DependentUpon>fmCadastrarCachorroAdocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmCadastrarProduto.resx">
+      <DependentUpon>fmCadastrarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmCadastrarUsuario.resx">
+      <DependentUpon>fmCadastrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmCadastrarPessoas.resx">
+      <DependentUpon>fmCadastrarPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmCaoDispPPessoa.resx">
+      <DependentUpon>fmCaoDispPPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmDetalhesCachorro.resx">
+      <DependentUpon>fmDetalhesCachorro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmDetalhesPessoas.resx">
+      <DependentUpon>fmDetalhesPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmMostrarCachorroDoacao.resx">
+      <DependentUpon>fmMostrarCachorroDoacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmPessoasQuerendoCao.resx">
+      <DependentUpon>fmPessoasQuerendoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmRelats.resx">
+      <DependentUpon>fmRelats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmTelaPrincipal.resx">
+      <DependentUpon>fmTelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmLogin.resx">
+      <DependentUpon>fmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frRelatAdocao.resx">
+      <DependentUpon>frRelatAdocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frRelatCachorros.resx">
+      <DependentUpon>frRelatCachorros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frRelatEstoque.resx">
+      <DependentUpon>frRelatEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frRelatPessoas.resx">
+      <DependentUpon>frRelatPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rtExtrato.resx">
+      <DependentUpon>rtExtrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Adocao.datasource" />
+    <None Include="Properties\DataSources\Cachorro.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="propetDataSet.xsc">
+      <DependentUpon>propetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="propetDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>propetDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="propetDataSet.xss">
+      <DependentUpon>propetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\botaoAlterado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botaoNormal.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botaoNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SepMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botaoAlteradoNaoSelecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accept-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
